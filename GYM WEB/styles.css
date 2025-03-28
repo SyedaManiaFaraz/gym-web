@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header {
+    background-color: #0d0111;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+.header.shrink {
+    padding: 10px 0;
+    background-color: #1a011f;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+}
+
+.hero {
+    background-image: url("https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero h2, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: white;
+    color: #050203;
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background: grey;
+}
+
+
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    background: url("https://img.lovepik.com/bg/20240227/Stunning-3D-Rendering-of-Black-Yoga-Mat-on-a-Wooden_3706527_wh300.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about h2 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.about p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    padding: 0 15px;
+}
+
+
+.services {
+    background: #f1f1f1;
+    padding: 60px 20px;
+    text-align: center;
+}
+.services h2{
+    font-size: 70px;
+    color: #050203;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    border: 5px solid black; 
+    border-radius: 10px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: center; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.services li:hover {
+    background: black; 
+    color: white; 
+    transform: scale(1.05); 
+}
+
+.contact {
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Gradient Background */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 20px auto;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact:hover {
+    transform: scale(1.05); 
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: grey; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+    color: black; 
+    text-decoration: underline;
+}
+
+
+.footer {
+    background-color: #050203;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

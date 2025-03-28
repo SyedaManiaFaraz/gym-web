@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Girls Gym</h1>
+            <button id="menu-toggle" class="menu-btn">☰</button>
+            <nav id="menu" class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>“Your Best Workout Starts Today!”</h2>
+        <p>"The pain you feel today will be the strength you feel tomorrow,"</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>FitZone Gym provides world-class training facilities, expert coaches, and a supportive community to help you achieve your fitness goals.</p>
+    
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/2027278927/photo/young-athletic-woman-exercising-with-barbell-during-sports-training-in-a-gym.jpg?s=612x612&w=0&k=20&c=ifFL7Mqc8NwTj25PAx4ONy1OOQZvc1S_kVOofsbLgFw=" alt="Strength Training">
+                <h3>Strength Training</h3>
+                <p>Boost your endurance and build muscle with our expert-led strength training sessions.</p>
+            </div>
+            <div class="card">
+                <img src="https://t3.ftcdn.net/jpg/05/50/90/18/360_F_550901860_4ncLKGHFHxMyQYr8ofqNGjYAl8alRnuN.jpg" alt="Personal Coaching">
+                <h3>Personal Coaching</h3>
+                <p>Get one-on-one training from our professional fitness coaches tailored to your goals.</p>
+            </div>
+            <div class="card">
+                <img src="https://i0.wp.com/trulymadly.com/blog/wp-content/uploads/2020/08/blog-137.jpg?resize=768%2C600&ssl=1" alt="Yoga & Relaxation">
+                <h3>Yoga & Relaxation</h3>
+                <p>Improve flexibility, reduce stress, and enhance mental well-being with our yoga sessions.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Personal Training</li>
+            <li>Group Fitness Classes</li>
+            <li>Yoga & Meditation</li>
+            <li>Strength & Conditioning</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@girls.com">info@girls.com</a></p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Girls Gym..</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
